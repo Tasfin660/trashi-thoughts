@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@layer base {
+	input,
+	textarea {
+		outline: none;
+	}
+	button,
+	[role='button'] {
+		cursor: pointer;
+	}
+}
+
+@theme {
+	--color-primary-50: #f5faff;
+	--color-primary-100: #ebf5ff;
+	--color-primary-200: #d6ebff;
+	--color-primary-300: #c2e1ff;
+	--color-primary-400: #add8ff;
+	--color-primary-500: #99cdff;
+	--color-primary-600: #47a6ff;
+	--color-primary-700: #007ef5;
+	--color-primary-800: #0054a3;
+	--color-primary-900: #002a52;
+	--color-primary-950: #001529;
+}
