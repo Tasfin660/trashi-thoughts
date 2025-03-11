@@ -9,6 +9,10 @@ import { useState } from 'react'
 export default function Thought({ data, i }: { data: Thought; i: number }) {
 	const [showModal, setShowModal] = useState(false)
 
+	function handleHideModal() {
+		setShowModal(false)
+	}
+
 	const { title, thought } = data
 
 	return (
@@ -30,7 +34,7 @@ export default function Thought({ data, i }: { data: Thought; i: number }) {
 			<p className="text-primary-600 self-end rounded-full bg-gradient-to-br font-medium">
 				#{i}
 			</p>
-			{showModal && <Modal data={data} />}
+			{showModal && <Modal data={data} onHideModal={handleHideModal} />}
 		</li>
 	)
 }
