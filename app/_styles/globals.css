@@ -24,3 +24,48 @@
 	--color-primary-900: #002a52;
 	--color-primary-950: #001529;
 }
+
+html {
+	scrollbar-gutter: stable;
+}
+
+.card::after,
+.card::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: conic-gradient(
+		from 90deg,
+		theme(colors.blue.500),
+		theme(colors.sky.500),
+		theme(colors.cyan.500),
+		theme(colors.blue.500)
+	);
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+	padding: 2px;
+	box-sizing: content-box;
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+.card::before {
+	filter: blur(0.5rem);
+	opacity: 0.2;
+}
+
+.card:hover::after,
+.card:hover::before {
+	background-image: conic-gradient(
+		from 90deg,
+		theme(colors.blue.500),
+		theme(colors.sky.500),
+		theme(colors.cyan.500),
+		theme(colors.teal.500),
+		theme(colors.emerald.500),
+		theme(colors.blue.500)
+	);
+}
