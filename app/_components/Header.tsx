@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import logo from '@/app/_icons/logo.svg'
+
 import CreateThought from './CreateThought'
 
 export default function Header() {
