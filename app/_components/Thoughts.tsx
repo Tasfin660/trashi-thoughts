@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
-import Loader from './Loader'
-import ThoughtsList from './ThoughtsList'
+
+import Loader from '@/app/_components/Loader'
+import ThoughtsList from '@/app/_components/ThoughtsList'
 
 export default function Thoughts() {
 	return (

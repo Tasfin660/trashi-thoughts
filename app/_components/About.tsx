@@ -1,8 +1,8 @@
+import Image from 'next/image'
+
 import forum from '@/app/_icons/forum.svg'
 import shower from '@/app/_icons/shower.svg'
 import thought from '@/app/_icons/thought.svg'
-
-import Image from 'next/image'
 
 export default function About() {
 	return (

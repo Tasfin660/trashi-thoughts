@@ -1,14 +1,16 @@
-import Thought from '@/app/_components/Thought'
-import type ThoughtType from '@/app/_types/Thought'
-import thoughtsData from '@/app/_data/data-thoughts.json'
 import Image from 'next/image'
 
 import thinking from '@/app/_icons/thinking.svg'
 
-export default async function ThoughtsList() {
-	const thoughts: ThoughtType[] = thoughtsData
+import Thought from '@/app/_components/Thought'
+import { getUsers } from '@/app/actions'
 
-	if (!thoughts.length)
+export default async function ThoughtsList() {
+	// const res = await fetch('http://localhost:3000/api/thoughts')
+	// const thoughts = await res.json()
+	const { data: thoughts } = await getUsers()
+
+	if (!thoughts)
 		return (
 			<div className="col-span-full -mt-7 -mb-4 flex flex-col items-center gap-3">
 				<Image src={thinking} alt="no thought found" className="size-24" />
@@ -19,7 +21,7 @@ export default async function ThoughtsList() {
 	return (
 		<>
 			{thoughts.map((th, i) => (
-				<Thought data={th} key={i} i={i + 1} />
+				<Thought data={th} key={th.title} i={i + 1} />
 			))}
 		</>
 	)

@@ -1,7 +1,5 @@
 'use client'
 
-import close from '@/app/_icons/close.svg'
-
 import Image from 'next/image'
 import {
 	cloneElement,
@@ -13,6 +11,8 @@ import {
 	useRef,
 	useState
 } from 'react'
+
+import close from '@/app/_icons/close.svg'
 
 interface Props {
 	children: ReactNode

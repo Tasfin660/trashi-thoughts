@@ -1,9 +1,9 @@
 'use client'
 
-import Thought from '@/app/_types/Thought'
-import Button from './Button'
+import { IThought } from '@/app/_models/thought.models'
+import Button from '@/app/_components/Button'
 
-export default function UpdateThought({ data }: { data: Thought }) {
+export default function UpdateThought({ data }: { data: IThought }) {
 	const { title, thought } = data
 
 	return (

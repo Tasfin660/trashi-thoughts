@@ -3,12 +3,17 @@ import Image from 'next/image'
 
 import click from '@/app/_icons/click.svg'
 
-import type Thought from '@/app/_types/Thought'
+import Modal from '@/app/_components/Modal'
+import UpdateThought from '@/app/_components/UpdateThought'
 
-import Modal from './Modal'
-import UpdateThought from './UpdateThought'
+import { IThought } from '@/app/_models/thought.models'
 
-export default function Thought({ data, i }: { data: Thought; i: number }) {
+interface ThoughtProps {
+	data: IThought
+	i: number
+}
+
+export default function Thought({ data, i }: ThoughtProps) {
 	const { title, thought } = data
 
 	return (
