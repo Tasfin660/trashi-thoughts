@@ -7,7 +7,9 @@ import Header from './_components/Header'
 import Footer from './_components/Footer'
 import About from './_components/About'
 
-const sen = Sen()
+const sen = Sen({
+	subsets: ['latin']
+})
 
 export const metadata: Metadata = {
 	title: 'Shower Thoughts - App',

@@ -1,3 +1,5 @@
+'use client'
+
 import Button from '@/app/_components/Button'
 
 export default function CreateThought() {
@@ -14,7 +16,7 @@ export default function CreateThought() {
 				placeholder="Your thoughts..."
 				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition"
 			/>
-			<Button>Post</Button>
+			<Button onClick={() => {}}>Post</Button>
 		</form>
 	)
 }

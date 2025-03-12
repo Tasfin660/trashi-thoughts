@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Button from './_components/Button'
 
 export default function NotFound() {
 	return (
@@ -8,8 +7,10 @@ export default function NotFound() {
 				The page you are looking for doesn&apos;t exist. Thanks for using
 				TrashiThoughts.
 			</p>
-			<Link href="/">
-				<Button>Go back to home page</Button>
+			<Link
+				href="/"
+				className="hover:bg-primary-500 border-primary-500 text-primary-500 rounded-lg border bg-white px-14 py-3 text-lg font-medium transition-all duration-500 hover:rounded-4xl hover:text-white">
+				Go back to home page
 			</Link>
 		</div>
 	)
