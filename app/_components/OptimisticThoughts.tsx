@@ -19,11 +19,14 @@ export default function OptimisticThoughts({
 	)
 
 	async function handleDelete(title: string) {
+		toast.success('Thought deleted')
 		optimisticDelete(title)
 		const { success, message } = await deleteThought(title)
 
-		if (success) toast.success(message)
-		else toast.error(message)
+		if (!success) {
+			toast.dismiss()
+			toast.error(message)
+		}
 	}
 
 	return (
