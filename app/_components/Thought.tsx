@@ -31,7 +31,7 @@ export default function Thought({ data, i, onDelete }: ThoughtProps) {
 						/>
 					</button>
 				</Modal.Action>
-				<p className="line-clamp-2 grow text-justify text-sm break-all">
+				<p className="line-clamp-2 grow text-justify text-sm break-words">
 					{thought}
 				</p>
 				<p className="text-primary-600 self-end rounded-full bg-gradient-to-br font-medium">
