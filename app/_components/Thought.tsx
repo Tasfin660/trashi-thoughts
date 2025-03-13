@@ -17,7 +17,7 @@ export default function Thought({ data, i }: ThoughtProps) {
 	const { title, thought } = data
 
 	return (
-		<li className="card relative flex flex-col space-y-1 rounded-lg bg-white px-3 py-2">
+		<li className="card py2 relative flex h-28 flex-col space-y-1 rounded-md bg-white px-3 py-2">
 			<Modal>
 				<Modal.Action>
 					<button className="flex items-center gap-1.5">
@@ -36,7 +36,7 @@ export default function Thought({ data, i }: ThoughtProps) {
 					#{i}
 				</p>
 				<Modal.Content>
-					<UpdateThought data={data} />
+					<UpdateThought data={data} closeModal={() => {}} />
 				</Modal.Content>
 			</Modal>
 		</li>

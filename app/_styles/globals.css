@@ -54,7 +54,7 @@ html {
 	z-index: -1;
 	padding: 2px;
 	box-sizing: content-box;
-	border-radius: 10px;
+	border-radius: 8px;
 	transition: all 0.5s;
 }
 
@@ -78,6 +78,19 @@ html {
 		theme(colors.indigo.500),
 		theme(colors.blue.500)
 	);
+}
+
+.modal-overlay {
+	animation: opacity 0.5s ease;
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .modal-transition {

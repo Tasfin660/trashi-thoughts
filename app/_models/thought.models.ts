@@ -16,7 +16,7 @@ const ThoughtSchema: Schema = new Schema<IThought>(
 		thought: {
 			type: String,
 			required: true,
-			maxlength: 1000
+			maxlength: 500
 		}
 	},
 	{

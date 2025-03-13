@@ -72,7 +72,7 @@ function Content({ children }: Props) {
 	if (!showModal) return null
 
 	return (
-		<div className="bg-primary-500/20 fixed top-0 left-0 z-50 h-screen w-full backdrop-blur-xs transition duration-500">
+		<div className="bg-primary-500/20 modal-overlay fixed top-0 left-0 z-50 h-dvh w-full backdrop-blur-xs">
 			<div
 				className="border-primary-200/80 modal-transition shadow-modal fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg border bg-white p-6"
 				ref={ref}>

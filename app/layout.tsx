@@ -24,8 +24,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body
-				className={`${sen.className} grid min-h-screen grid-rows-[max-content_max-content_1fr_max-content] text-gray-700`}>
+			<body className={`${sen.className} grid min-h-dvh grid-rows-[max-content_max-content_1fr_max-content] text-gray-700`}>
 				<Header />
 				<About />
 				{children}
