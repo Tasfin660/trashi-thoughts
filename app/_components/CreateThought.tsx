@@ -1,10 +1,12 @@
 'use client'
 
-import Button from '@/app/_components/Button'
-import { createThought } from '@/app/actions'
 import { useFormStatus } from 'react-dom'
-import Spinner from './Spinner'
 import toast from 'react-hot-toast'
+
+import Button from '@/app/_components/Button'
+import Spinner from '@/app/_components/Spinner'
+
+import { createThought } from '@/app/actions'
 
 export default function CreateThought() {
 	async function handleSubmit(formData: FormData) {

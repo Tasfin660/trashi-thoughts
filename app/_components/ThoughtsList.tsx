@@ -2,7 +2,8 @@ import Image from 'next/image'
 
 import thinking from '@/app/_icons/thinking.svg'
 
-import Thought from '@/app/_components/Thought'
+import OptimisticThoughts from '@/app/_components/OptimisticThoughts'
+
 import { getThoughts } from '@/app/actions'
 
 export default async function ThoughtsList() {
@@ -27,11 +28,5 @@ export default async function ThoughtsList() {
 			</div>
 		)
 
-	return (
-		<>
-			{thoughts.map((th, i) => (
-				<Thought data={th} key={th.title} i={i + 1} />
-			))}
-		</>
-	)
+	return <OptimisticThoughts thoughts={thoughts} />
 }

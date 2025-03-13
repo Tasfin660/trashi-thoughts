@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 
 import click from '@/app/_icons/click.svg'
@@ -11,9 +12,10 @@ import { IThought } from '@/app/_models/thought.models'
 interface ThoughtProps {
 	data: IThought
 	i: number
+	onDelete: (title: string) => void
 }
 
-export default function Thought({ data, i }: ThoughtProps) {
+export default function Thought({ data, i, onDelete }: ThoughtProps) {
 	const { title, thought } = data
 
 	return (
@@ -36,7 +38,11 @@ export default function Thought({ data, i }: ThoughtProps) {
 					#{i}
 				</p>
 				<Modal.Content>
-					<UpdateThought data={data} closeModal={() => {}} />
+					<UpdateThought
+						data={data}
+						closeModal={() => {}}
+						onDelete={onDelete}
+					/>
 				</Modal.Content>
 			</Modal>
 		</li>

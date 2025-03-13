@@ -1,10 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import { Toaster } from 'react-hot-toast'
 
 import check from '@/app/_icons/check.svg'
 import error from '@/app/_icons/error.svg'
-import Image from 'next/image'
 
 export default function HotToast() {
 	return (

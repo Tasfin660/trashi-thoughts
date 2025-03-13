@@ -1,10 +1,10 @@
 'use server'
 
-import connectDB from '@/app/_lib/mongodb'
-
-import { IThought, Thought } from '@/app/_models/thought.models'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
+
+import connectDB from '@/app/_lib/mongodb'
+import { IThought, Thought } from '@/app/_models/thought.models'
 
 export async function getThoughts(): Promise<{
 	success: boolean

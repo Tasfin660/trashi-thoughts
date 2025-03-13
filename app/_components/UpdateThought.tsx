@@ -1,20 +1,27 @@
 'use client'
 
-import { IThought } from '@/app/_models/thought.models'
-import Button from '@/app/_components/Button'
-import Spinner from './Spinner'
+import { useTransition } from 'react'
 import { useFormStatus } from 'react-dom'
-import { deleteThought, updateThought } from '../actions'
 import toast from 'react-hot-toast'
+
+import Button from '@/app/_components/Button'
+import Spinner from '@/app/_components/Spinner'
+
+import { IThought } from '@/app/_models/thought.models'
+import { updateThought } from '@/app/actions'
 
 export default function UpdateThought({
 	data,
-	closeModal
+	closeModal,
+	onDelete
 }: {
 	data: IThought
 	closeModal: () => void
+	onDelete: (title: string) => void
 }) {
 	const { title, thought } = data
+
+	const [, startTransition] = useTransition()
 
 	async function handleSubmit(formData: FormData) {
 		const { success, message } = await updateThought(formData)
@@ -23,15 +30,6 @@ export default function UpdateThought({
 			closeModal()
 			toast.success(message)
 		} else toast.error(message)
-	}
-
-	async function handleDelete() {
-		const { success, message } = await deleteThought(title)
-
-		if (success) toast.success(message)
-		else toast.error(message)
-
-		closeModal()
 	}
 
 	return (
@@ -46,7 +44,16 @@ export default function UpdateThought({
 				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition"
 			/>
 			<div className="mt-4 mb-2 flex space-x-5">
-				<Button variant="danger" onClick={async () => handleDelete()}>
+				<Button
+					variant="danger"
+					onClick={() =>
+						startTransition(() => {
+							{
+								closeModal()
+								onDelete(title)
+							}
+						})
+					}>
 					Delete
 				</Button>
 				<SubmitButton />

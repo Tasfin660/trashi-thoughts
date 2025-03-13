@@ -1,4 +1,4 @@
-import Thoughts from './_components/Thoughts'
+import Thoughts from '@/app/_components/Thoughts'
 
 // this line here controls how caching will work on this page, or to opt out put 0, or 'force-dynamic'
 // export const revalidate = <time>
