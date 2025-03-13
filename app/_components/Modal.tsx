@@ -74,7 +74,7 @@ function Content({ children }: Props) {
 	return (
 		<div className="bg-primary-500/20 modal-overlay fixed top-0 left-0 z-50 h-dvh w-full backdrop-blur-xs">
 			<div
-				className="border-primary-200/80 modal-transition shadow-modal fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg border bg-white p-6"
+				className="border-primary-200/80 modal-transition shadow-modal fixed top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg border bg-white p-6 max-[768px]:w-[95%]"
 				ref={ref}>
 				{cloneElement(children as ReactElement<{ closeModal: () => void }>, {
 					closeModal

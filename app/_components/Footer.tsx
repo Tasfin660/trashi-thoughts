@@ -13,7 +13,7 @@ export default function Footer() {
 	]
 
 	return (
-		<footer className="bg-primary-900 flex flex-col items-center pt-9 pb-8 text-center font-medium">
+		<footer className="bg-primary-900 flex flex-col items-center px-8 pt-9 pb-8 text-center font-medium">
 			<div className="flex items-center gap-4">
 				{socialLinks.map((el) => (
 					<Link href={el.url} key={el.url} target="_blank">
@@ -29,7 +29,10 @@ export default function Footer() {
 				TrashiThoughts
 			</h4>
 			<p className="text-sm text-white">
-				Copyright © Tasfin Hasan | Cocoa Insights {new Date().getFullYear()}.
+				Copyright © Tasfin Hasan |{' '}
+				<span className="my-1 max-[400px]:block">
+					TrashiThoughts {new Date().getFullYear()}.
+				</span>{' '}
 				All Rights Reserved.
 			</p>
 		</footer>

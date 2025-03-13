@@ -6,7 +6,7 @@ import thought from '@/app/_icons/thought.svg'
 
 export default function About() {
 	return (
-		<section className="flex items-center justify-center gap-12 py-16">
+		<section className="flex flex-wrap items-center justify-center gap-12 px-6 py-16 max-[1024px]:gap-8">
 			<div className="border-primary-200/60 w-3xs space-y-2 rounded-2xl border p-4 shadow-sm">
 				<Image src={shower} alt="shower logo" className="size-8" />
 				<h2 className="text-primary-600 text-lg font-medium">Go to shower</h2>

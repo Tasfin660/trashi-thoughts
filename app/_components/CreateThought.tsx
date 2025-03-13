@@ -17,17 +17,17 @@ export default function CreateThought() {
 	}
 
 	return (
-		<form action={handleSubmit} className="contents w-max bg-red-500">
+		<form action={handleSubmit} className="contents">
 			<input
 				type="text"
 				name="title"
 				placeholder="Title"
-				className="border-primary-200/80 focus:border-primary-500/60 -mb-2 h-12 w-2xl resize-none rounded-md border bg-white px-4 py-3 text-sm transition"
+				className="border-primary-200/80 focus:border-primary-500/60 -mb-2 h-12 w-2xl resize-none rounded-md border bg-white px-4 py-3 text-sm transition max-[768px]:w-full"
 			/>
 			<textarea
 				name="thought"
 				placeholder="Your thoughts..."
-				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition"
+				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition max-[768px]:w-full"
 			/>
 			<SubmitButton />
 		</form>

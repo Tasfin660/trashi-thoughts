@@ -41,9 +41,9 @@ export default function UpdateThought({
 				name="thought"
 				placeholder="Your thoughts..."
 				defaultValue={thought}
-				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition"
+				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition max-[768px]:w-full max-[640px]:h-52"
 			/>
-			<div className="mt-4 mb-2 flex space-x-5">
+			<div className="mt-4 mb-2 flex gap-5 max-[640px]:flex-col">
 				<Button
 					variant="danger"
 					onClick={() =>

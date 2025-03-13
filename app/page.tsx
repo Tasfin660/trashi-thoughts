@@ -5,7 +5,7 @@ import Thoughts from '@/app/_components/Thoughts'
 
 export default function Page() {
 	return (
-		<section className="border-t-primary-500 border-t-2 py-16">
+		<section className="border-t-primary-500 mx-auto w-full max-w-7xl border-t-2 px-6 py-16">
 			<Thoughts />
 		</section>
 	)
