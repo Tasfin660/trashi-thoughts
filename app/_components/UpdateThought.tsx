@@ -15,7 +15,7 @@ export default function UpdateThought({ data }: { data: IThought }) {
 				defaultValue={thought}
 				className="border-primary-200/80 focus:border-primary-500/60 h-40 w-2xl resize-none rounded-lg border bg-white px-4 py-3 text-sm transition"
 			/>
-			<div className="mt-4 mb-2 space-x-5">
+			<div className="mt-4 mb-2 flex space-x-5">
 				<Button type="danger" onClick={() => {}}>
 					Delete
 				</Button>

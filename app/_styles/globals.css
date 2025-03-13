@@ -25,6 +25,8 @@
 	--color-primary-900: #002a52;
 	--color-primary-950: #001529;
 
+	--color-red-600: oklch(0.577 0.245 27.325);
+
 	--shadow-modal: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
 
